@@ -7,3 +7,44 @@ section {
     padding: 1rem;
 }
 /* developer styles go here */
+
+h2 {
+    background-color: tomato;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    /** 
+    postion our heading our heading so it sticks to the top of browser 
+    - A stickily positioned element is treated is relatively postioned until it crosses a certain threshold, at which point it's treated as fixed positioning until it reaches it boundary of its parent 
+    **/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /** scrolling works here because the h2 and h3 both sibiling elements **/
+}
+
+h3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 68px;
+    background-color: white;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 60ch
+}
+
+h1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* this doesn't work because the h1 has no sibiling elements **/
+}
+.snowflake {
+    /** fixed positioned - similar to absolute elements - the natural space the element took up in the flow is now gone **/
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1;
+}
